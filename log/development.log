@@ -2479,3 +2479,372 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 43ms (Views: 30.6ms | ActiveRecord: 0.5ms | Allocations: 5223)
 
 
+Started GET "/users/new" for ::1 at 2021-01-22 14:04:28 -0600
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 896)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 6471)
+Completed 200 OK in 121ms (Views: 70.4ms | ActiveRecord: 3.0ms | Allocations: 13693)
+
+
+Started POST "/users" for ::1 at 2021-01-22 14:04:47 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"Milyy", "email"=>"milyy@milyy", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 3269)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.0ms | Allocations: 4565)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:14:17 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 432.5ms | Allocations: 504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 444.6ms | Allocations: 3486)
+Completed 200 OK in 483ms (Views: 447.9ms | ActiveRecord: 1.2ms | Allocations: 7531)
+
+
+Started PUT "/users/:id/edit" for ::1 at 2021-01-22 14:14:58 -0600
+  
+ActionController::RoutingError (No route matches [PUT] "/users/:id/edit"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:15:19 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 14.2ms | Allocations: 531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 3804)
+Completed 200 OK in 43ms (Views: 35.1ms | ActiveRecord: 0.6ms | Allocations: 5553)
+
+
+Started PATCH "/users/:id/edit" for ::1 at 2021-01-22 14:15:31 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users/:id/edit"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:16:56 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 15.9ms | Allocations: 531)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 3800)
+Completed 200 OK in 55ms (Views: 44.6ms | ActiveRecord: 0.5ms | Allocations: 5566)
+
+
+Started PATCH "/users" for ::1 at 2021-01-22 14:17:06 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:18:49 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 22.0ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 3863)
+Completed 200 OK in 50ms (Views: 39.8ms | ActiveRecord: 0.3ms | Allocations: 5616)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:22:42 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 765.6ms | Allocations: 4386)
+  Rendered layout layouts/application.html.erb (Duration: 767.1ms | Allocations: 4455)
+Completed 500 Internal Server Error in 781ms (ActiveRecord: 0.2ms | Allocations: 6195)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_path' for #<ActionView::Base:0x00000000008c50>
+Did you mean?  users_path):
+     9: #   <input type="submit" value="Submit">
+    10: # </form>-->
+    11: 
+    12: <%= form_with(url: user_path, method: "patch") do %></br></br>
+    13:   <%= label_tag(:username, "Your username here:")%></br></br>
+    14:   <%= text_field_tag(:username, "Name")%></br></br>
+    15:   <%= label_tag(:email, "Email:")%></br></br>
+  
+app/views/users/edit.html.erb:12
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:23:00 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 3914)
+Completed 200 OK in 32ms (Views: 23.3ms | ActiveRecord: 0.2ms | Allocations: 5666)
+
+
+Started PATCH "/users" for ::1 at 2021-01-22 14:23:11 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+Started PATCH "/users" for ::1 at 2021-01-22 14:25:41 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:25:43 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 279.9ms | Allocations: 4325)
+  Rendered layout layouts/application.html.erb (Duration: 280.4ms | Allocations: 4394)
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.4ms | Allocations: 6108)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_path' for #<ActionView::Base:0x00000000009920>
+Did you mean?  users_path):
+     9: #   <input type="submit" value="Submit">
+    10: # </form>-->
+    11: 
+    12: <%= form_with(url: user_path, method: "patch") do |el| %></br></br>
+    13:   <%= el.label("username")%></br></br>
+    14:   <%= text_field_tag(:username, "Name")%></br></br>
+    15:   <%= label_tag(:email, "Email:")%></br></br>
+  
+app/views/users/edit.html.erb:12
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:25:44 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 24.1ms | Allocations: 4083)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 4292)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.2ms | Allocations: 7485)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_path' for #<ActionView::Base:0x000000000099e8>
+Did you mean?  users_path):
+     9: #   <input type="submit" value="Submit">
+    10: # </form>-->
+    11: 
+    12: <%= form_with(url: user_path, method: "patch") do |el| %></br></br>
+    13:   <%= el.label("username")%></br></br>
+    14:   <%= text_field_tag(:username, "Name")%></br></br>
+    15:   <%= label_tag(:email, "Email:")%></br></br>
+  
+app/views/users/edit.html.erb:12
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:25:45 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 21.7ms | Allocations: 4083)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4151)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.3ms | Allocations: 5101)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_path' for #<ActionView::Base:0x00000000009f38>
+Did you mean?  users_path):
+     9: #   <input type="submit" value="Submit">
+    10: # </form>-->
+    11: 
+    12: <%= form_with(url: user_path, method: "patch") do |el| %></br></br>
+    13:   <%= el.label("username")%></br></br>
+    14:   <%= text_field_tag(:username, "Name")%></br></br>
+    15:   <%= label_tag(:email, "Email:")%></br></br>
+  
+app/views/users/edit.html.erb:12
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:37:59 -0600
+  
+SyntaxError (/home/mily/Desktop/Microverse-Projects/RoR Module/Forms/forms_authentication/app/controllers/users_controller.rb:34: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/users_controller.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users_controller.rb:34: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users_controller.rb:34: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:38:20 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 270.0ms | Allocations: 4327)
+  Rendered layout layouts/application.html.erb (Duration: 270.6ms | Allocations: 4396)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 1.7ms | Allocations: 10041)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_path' for #<ActionView::Base:0x0000000000c008>
+Did you mean?  users_path):
+     9: #   <input type="submit" value="Submit">
+    10: # </form>-->
+    11: 
+    12: <%= form_for(url: user_path, method: "patch") do |el| %></br></br>
+    13:   <%= el.label("username")%></br></br>
+    14:   <%= text_field_tag(:username, "Name")%></br></br>
+    15:   <%= label_tag(:email, "Email:")%></br></br>
+  
+app/views/users/edit.html.erb:12
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:39:32 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 613)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 3884)
+Completed 200 OK in 39ms (Views: 29.8ms | ActiveRecord: 0.4ms | Allocations: 5648)
+
+
+Started PATCH "/users" for ::1 at 2021-01-22 14:40:00 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+Started PATCH "/users" for ::1 at 2021-01-22 14:41:46 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:41:49 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 3475)
+Completed 200 OK in 67ms (Views: 21.6ms | ActiveRecord: 3.3ms | Allocations: 8960)
+
+
+Started GET "/users" for ::1 at 2021-01-22 14:41:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:41:52 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3379)
+Completed 200 OK in 21ms (Views: 15.6ms | ActiveRecord: 0.3ms | Allocations: 4366)
+
+
+Started PATCH "/users" for ::1 at 2021-01-22 14:42:03 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:43:18 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.6ms | Allocations: 380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3460)
+Completed 200 OK in 51ms (Views: 21.6ms | ActiveRecord: 3.3ms | Allocations: 9118)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:43:31 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3376)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 4364)
+
+
+Started PATCH "/users" for ::1 at 2021-01-22 14:43:40 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/users"):
+  
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:44:02 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3379)
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 0.2ms | Allocations: 4366)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-01-22 14:48:36 -0600
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1075.9ms | Allocations: 3964)
+  Rendered layout layouts/application.html.erb (Duration: 1079.9ms | Allocations: 4033)
+Completed 500 Internal Server Error in 1095ms (ActiveRecord: 0.3ms | Allocations: 5754)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000efd8>
+Did you mean?  users_path):
+    22: <%@user.errors.full_messages.each do |m|%>
+    23: <%=m%><br>
+    24: <%end%>
+    25: <%=form_for @user do |f|%>
+    26: Username: <%=f.text_field :username%><br>
+    27: Email : <%=f.text_field :email, placeholder: 'example@email.com'%><br>
+    28: Password: <%=f.password_field :password%><br>
+  
+app/views/users/edit.html.erb:25
