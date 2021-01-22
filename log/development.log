@@ -659,3 +659,337 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 10ms (Views: 8.6ms | Allocations: 3614)
 
 
+Started GET "/users/new?username=asas&email=asas%40asasas&password=[FILTERED]" for ::1 at 2021-01-22 11:27:22 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3007)
+Completed 200 OK in 14ms (Views: 12.0ms | Allocations: 3500)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:27:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 10ms (Allocations: 3078)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x0000000000a4b0>
+Did you mean?  super):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started GET "/users/new?username=asas&email=asas%40asasas&password=[FILTERED]" for ::1 at 2021-01-22 11:27:57 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3017)
+Completed 200 OK in 14ms (Views: 11.3ms | Allocations: 3511)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:27:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 12ms (Allocations: 3281)
+
+
+  
+NoMethodError (undefined method `username' for #<UsersController:0x0000000000b630>):
+  
+app/controllers/users_controller.rb:6:in `create'
+Started GET "/users/new?username=asas&email=asas%40asasas&password=[FILTERED]" for ::1 at 2021-01-22 11:28:29 -0500
+Processing by UsersController#new as HTML
+  Parameters: {"username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3017)
+Completed 200 OK in 9ms (Views: 7.8ms | Allocations: 3511)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:28:38 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "asas"], ["email", "asas@asasas"], ["password", "asasas"], ["created_at", "2021-01-22 16:28:38.511305"], ["updated_at", "2021-01-22 16:28:38.511305"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (161.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 208ms (ActiveRecord: 164.3ms | Allocations: 9418)
+
+
+Started GET "/users/new" for ::1 at 2021-01-22 11:28:38 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 3025)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 3399)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:29:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2963)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 3908)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:29:58 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "email"=>"", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2953)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 3919)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:30:49 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2953)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 3894)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:30:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "email"=>"", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2955)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 3923)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:30:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "email"=>"", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 2953)
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 3919)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:30:52 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "email"=>"", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 2953)
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 3911)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:31:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"", "email"=>"asasas@a", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2953)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3901)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started POST "/users" for ::1 at 2021-01-22 11:34:37 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2966)
+Completed 200 OK in 27ms (Views: 10.2ms | ActiveRecord: 2.6ms | Allocations: 7816)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:35:00 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2966)
+Completed 200 OK in 19ms (Views: 8.4ms | ActiveRecord: 1.0ms | Allocations: 7824)
+
+
+Started GET "/users/new" for ::1 at 2021-01-22 11:35:04 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3025)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3399)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:35:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2953)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3901)
+
+
+Started GET "/users/new" for ::1 at 2021-01-22 11:35:11 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3025)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 3399)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:35:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "asas"], ["email", "asas@asasas"], ["password", "asas"], ["created_at", "2021-01-22 16:35:24.134226"], ["updated_at", "2021-01-22 16:35:24.134226"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (538.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 553ms (ActiveRecord: 539.3ms | Allocations: 4677)
+
+
+Started GET "/users/new" for ::1 at 2021-01-22 11:35:24 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3025)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3399)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:35:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"as", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "as"], ["email", "asas@asasas"], ["password", "a"], ["created_at", "2021-01-22 16:35:43.555065"], ["updated_at", "2021-01-22 16:35:43.555065"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (221.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 222.8ms | Allocations: 11329)
+
+
+  
+NameError (undefined local variable or method `new_users_path' for #<UsersController:0x0000000000f2d0>
+Did you mean?  new_user_path):
+  
+app/controllers/users_controller.rb:9:in `create'
+Started GET "/users/new" for ::1 at 2021-01-22 11:35:49 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3038)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 3526)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:35:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"as", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 2953)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3891)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:36:14 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "asas"], ["email", "asas@asasas"], ["password", "asasas"], ["created_at", "2021-01-22 16:36:14.849014"], ["updated_at", "2021-01-22 16:36:14.849014"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (139.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 142.0ms | Allocations: 10682)
+
+
+  
+NameError (undefined local variable or method `new_users_path' for #<UsersController:0x00000000010478>
+Did you mean?  new_user_path):
+  
+app/controllers/users_controller.rb:9:in `create'
+Started GET "/users" for ::1 at 2021-01-22 11:36:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2021-01-22 11:36:19 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3038)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 3526)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:36:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"as", "email"=>"asas@asasas", "password"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2963)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3903)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:37:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "username"=>"asas", "email"=>"asasas@a", "password"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 58)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2956)
+Completed 200 OK in 26ms (Views: 10.4ms | ActiveRecord: 1.6ms | Allocations: 7789)
+
+
