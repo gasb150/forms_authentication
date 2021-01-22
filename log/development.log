@@ -993,3 +993,80 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 26ms (Views: 10.4ms | ActiveRecord: 1.6ms | Allocations: 7789)
 
 
+Started GET "/" for ::1 at 2021-01-22 10:56:23 -0600
+  [1m[35m (47.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mily/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 30.6ms | Allocations: 522)
+Completed 200 OK in 77ms (Views: 42.9ms | ActiveRecord: 0.0ms | Allocations: 4194)
+
+
+Started GET "/users" for ::1 at 2021-01-22 10:56:39 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/user" for ::1 at 2021-01-22 10:56:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users/new" for ::1 at 2021-01-22 10:56:53 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 118.7ms | Allocations: 225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 504.7ms | Allocations: 13684)
+Completed 200 OK in 533ms (Views: 531.1ms | ActiveRecord: 0.0ms | Allocations: 14920)
+
+
+Started POST "/users" for ::1 at 2021-01-22 10:57:22 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"pedro", "email"=>"pedro@nsahfd", "password"=>"[FILTERED]"}}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 69)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3036)
+Completed 200 OK in 61ms (Views: 17.7ms | ActiveRecord: 1.9ms | Allocations: 10028)
+
+
+Started GET "/users" for ::1 at 2021-01-22 11:07:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2021-01-22 11:07:48 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 75)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 3184)
+Completed 200 OK in 38ms (Views: 32.0ms | Allocations: 3809)
+
+
+Started POST "/users" for ::1 at 2021-01-22 11:08:08 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"kjbcsdkb", "email"=>"jsdhj@hfc", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "kjbcsdkb"], ["email", "jsdhj@hfc"], ["password", "1234"], ["created_at", "2021-01-22 17:08:08.783797"], ["updated_at", "2021-01-22 17:08:08.783797"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (746.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://[::1]:3000/users/new
+Completed 302 Found in 794ms (ActiveRecord: 748.3ms | Allocations: 8631)
+
+
+Started GET "/users/new" for ::1 at 2021-01-22 11:08:09 -0600
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 70)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3116)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 3557)
+
+
