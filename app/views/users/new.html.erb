@@ -9,12 +9,21 @@
 #   <input type="submit" value="Submit">
 # </form>-->
 
-<%= form_form("/users", method: "post") do %></br></br>
-   <%= label_tag(:username, "Your username here:")%></br></br>
-   <%= text_field_tag(:username, "Name")%></br></br>
-   <%= label_tag(:email, "Email:")%></br></br>
-   <%= email_field_tag(:email, nil, placeholder: "example@example.com")%></br></br>
-   <%= label_tag(:password, "Password:")%></br></br>
-   <%= password_field_tag(:password)%></br></br>
-   <%= submit_tag("Submit")%>
- <% end %>
+# <!--<%= form_for("/users", method: "post") do %></br></br>
+#    <%= label_tag(:username, "Your username here:")%></br></br>
+#    <%= text_field_tag(:username, "Name")%></br></br>
+#    <%= label_tag(:email, "Email:")%></br></br>
+#    <%= email_field_tag(:email, nil, placeholder: "example@example.com")%></br></br>
+#    <%= label_tag(:password, "Password:")%></br></br>
+#    <%= password_field_tag(:password)%></br></br>
+#    <%= submit_tag("Submit")%>
+#  <% end %>-->
+
+ <%= form_for @user, url: { action: "create" } do |u| %></br></br>
+  <%= u.label :username, 'Your username here' %></br></br>
+  <%= u.text_field :username, placeholder: 'Yor username' %></br></br>
+  <%= u.label :email, 'Email' %></br></br>
+  <%= u.email_field :email, placeholder: 'example@example.com' %></br></br>
+  <%= u.label :password, 'Password' %></br></br>
+  <%= u.password_field :password, placeholder: '********' %></br></br>
+<% end %>
