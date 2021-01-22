@@ -9,22 +9,22 @@
 #   <input type="submit" value="Submit">
 # </form>-->
 
-<%= form_with(url: "/users", method: "get") do %></br></br>
-  <%= label_tag("username")%></br></br>
-  <%= text_field_tag(:username, "Name")%></br></br>
-  <%= label_tag(:email, "Email:")%></br></br>
-  <%= email_field_tag(:email, nil, placeholder: "example@example.com")%></br></br>
-  <%= label_tag(:password, "Password:")%></br></br>
-  <%= password_field_tag(:password)%></br></br>
-  <%= submit_tag("Submit")%>
-<% end %>
+# <%= form_with(url: "/users", method: "post") do %></br></br>
+#   <%= label_tag("username")%></br></br>
+#   <%= text_field_tag(:username, "Name")%></br></br>
+#   <%= label_tag(:email, "Email:")%></br></br>
+#   <%= email_field_tag(:email, nil, placeholder: "example@example.com")%></br></br>
+#   <%= label_tag(:password, "Password:")%></br></br>
+#   <%= password_field_tag(:password)%></br></br>
+#   <%= submit_tag("Submit")%>
+# <% end %>
 
-<!--<%@user.errors.full_messages.each do |m|%>
-<%=m%><br>
-<%end%>
-<%=form_for @user do |f|%>
-Username: <%=f.text_field :username%><br>
-Email : <%=f.text_field :email, placeholder: 'example@email.com'%><br>
-Password: <%=f.password_field :password%><br>
-<%=f.submit%>
-<%end%>-->
+<%= form_for @user, method: :patch do |f| %>
+  <% if @user.errors.any? %>
+  @user.errors
+  <%end%>
+  username: <%= f.text_field :username, placeholder: "your new username" %><br />
+  email : <%= f.text_field :email %><br />
+  password : <%= f.password_field :password %><br />
+  <%= f.submit "Upadte" %>
+  <% end %> 
