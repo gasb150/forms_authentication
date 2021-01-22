@@ -1,0 +1,9 @@
+<%= form_with(url: "/users/:id/edit", method: "patch") do %></br></br>
+    <%= label_tag(:username, "Your username here:")%></br></br>
+    <%= text_field_tag(:username)%></br></br>
+    <%= label_tag(:email, "Email:")%></br></br>
+    <%= email_field_tag(:email)%></br></br>
+    <%= label_tag(:password, "Password:")%></br></br>
+    <%= password_field_tag(:password)%></br></br>
+    <%= submit_tag("Submit")%>
+  <% end %>
