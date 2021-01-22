@@ -6,23 +6,14 @@ class UsersController < ApplicationController
 
     def create
       @user = User.new(username: params[:username], email: params[:email], password: params[:password])
-    
+      #@user = User.new(user_params)
       if @user.save
-        redirect_to newasas_user_path
+        redirect_to new_user_path
       else
         render :new
       end
     end
-    # def create
-    #     #@user = User.new(username: params[:username], email: params[:email], password: params[:password])
-    #     @user = User.new(params[:user_params])
-
-    #     if @user.save
-    #       redirect_to new_user_path
-    #     else
-    #       render :new
-    #     end
-    # end
+   
 
     def edit
       @user = User.find(params[:id])
@@ -30,7 +21,7 @@ class UsersController < ApplicationController
 
     def update
       @user = User.find(params[:id])
-        if @user.update(params[:user_params])
+        if @user.update(user_params)
           redirect_to user_path
         else
           render :edit
