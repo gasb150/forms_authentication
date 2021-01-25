@@ -9,7 +9,7 @@
 #   <input type="submit" value="Submit">
 # </form>-->
 
-# <%= form_with(url: "/users", method: "post") do %></br></br>
+# <!--<%= form_with(url: "/users", method: "post") do %></br></br>
 #   <%= label_tag("username")%></br></br>
 #   <%= text_field_tag(:username, "Name")%></br></br>
 #   <%= label_tag(:email, "Email:")%></br></br>
@@ -17,14 +17,14 @@
 #   <%= label_tag(:password, "Password:")%></br></br>
 #   <%= password_field_tag(:password)%></br></br>
 #   <%= submit_tag("Submit")%>
-# <% end %>
+# <% end %>-->
 
-<%= form_for @user, method: :patch do |f| %>
-  <% if @user.errors.any? %>
-  @user.errors
-  <%end%>
-  username: <%= f.text_field :username, placeholder: "your new username" %><br />
-  email : <%= f.text_field :email %><br />
-  password : <%= f.password_field :password %><br />
-  <%= f.submit "Upadte" %>
-  <% end %> 
+ <%= form_for @user, url: { action: "update" } do |u| %></br></br>
+  <%= u.label :username, 'Your username here' %></br></br>
+  <%= u.text_field :username, placeholder: 'Your username' %></br></br>
+  <%= u.label :email, 'Email' %></br></br>
+  <%= u.email_field :email, placeholder: 'example@example.com' %></br></br>
+  <%= u.label :password, 'Password' %></br></br>
+  <%= u.password_field :password, placeholder: '********' %></br></br>
+  <%= u.submit%>
+<% end %>

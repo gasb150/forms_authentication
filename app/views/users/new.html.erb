@@ -20,10 +20,18 @@
 #  <% end %>-->
 
  <%= form_for @user, url: { action: "create" } do |u| %></br></br>
+  <% if @user.errors.any? %>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %> 
   <%= u.label :username, 'Your username here' %></br></br>
-  <%= u.text_field :username, placeholder: 'Yor username' %></br></br>
+  <%= u.text_field :username, placeholder: 'Your username' %></br></br>
   <%= u.label :email, 'Email' %></br></br>
   <%= u.email_field :email, placeholder: 'example@example.com' %></br></br>
   <%= u.label :password, 'Password' %></br></br>
   <%= u.password_field :password, placeholder: '********' %></br></br>
+  <%= u.submit%>
 <% end %>
