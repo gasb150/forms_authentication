@@ -5498,3 +5498,165 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 48ms (Views: 37.8ms | ActiveRecord: 0.8ms | Allocations: 8225)
 
 
+Started GET "/" for ::1 at 2021-01-25 10:52:32 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/tavo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/tavo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 32.2ms | Allocations: 337)
+Completed 200 OK in 73ms (Views: 38.6ms | ActiveRecord: 0.0ms | Allocations: 2461)
+
+
+Started GET "/new" for ::1 at 2021-01-25 10:52:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/users/new" for ::1 at 2021-01-25 10:52:48 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 3181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 331.0ms | Allocations: 8195)
+Completed 200 OK in 414ms (Views: 370.7ms | ActiveRecord: 2.0ms | Allocations: 13234)
+
+
+Started POST "/users" for ::1 at 2021-01-25 10:52:55 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"Miaksa", "email"=>"test@ing.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Miaksa"], ["email", "test@ing.com"], ["password", "1234567890'"], ["created_at", "2021-01-25 15:52:55.622413"], ["updated_at", "2021-01-25 15:52:55.622413"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (202.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://[::1]:3000/users/new
+Completed 302 Found in 224ms (ActiveRecord: 203.8ms | Allocations: 4991)
+
+
+Started GET "/users/new" for ::1 at 2021-01-25 10:52:55 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3845)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 4235)
+
+
+Started GET "/users/1/edit" for ::1 at 2021-01-25 10:53:01 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1295)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4201)
+Completed 200 OK in 35ms (Views: 15.1ms | ActiveRecord: 0.6ms | Allocations: 7260)
+
+
+Started GET "/users/12/edit" for ::1 at 2021-01-25 10:53:05 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1081)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=12):
+  
+app/controllers/users_controller.rb:17:in `edit'
+Started GET "/users/11/edit" for ::1 at 2021-01-25 10:53:09 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1091)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=11):
+  
+app/controllers/users_controller.rb:17:in `edit'
+Started GET "/users/10/edit" for ::1 at 2021-01-25 10:53:12 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.1ms | Allocations: 1088)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=10):
+  
+app/controllers/users_controller.rb:17:in `edit'
+Started GET "/users/9/edit" for ::1 at 2021-01-25 10:53:17 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 875)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3851)
+Completed 200 OK in 19ms (Views: 10.9ms | ActiveRecord: 1.0ms | Allocations: 4767)
+
+
+Started PATCH "/users/9" for ::1 at 2021-01-25 10:54:00 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"nothingtowrite", "email"=>"nothingto@writ.te", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "username" = ?, "email" = ?, "password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["username", "nothingtowrite"], ["email", "nothingto@writ.te"], ["password", "nothingtowrite"], ["updated_at", "2021-01-25 15:54:00.110454"], ["id", 9]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (166.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Redirected to http://[::1]:3000/users/9/edit
+Completed 302 Found in 192ms (ActiveRecord: 167.2ms | Allocations: 5392)
+
+
+Started GET "/users/9/edit" for ::1 at 2021-01-25 10:54:00 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.9ms | Allocations: 876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 3844)
+Completed 200 OK in 38ms (Views: 24.0ms | ActiveRecord: 0.5ms | Allocations: 4760)
+
+
+Started PATCH "/users/9" for ::1 at 2021-01-25 10:54:11 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5543)
+Completed 200 OK in 28ms (Views: 21.3ms | ActiveRecord: 0.2ms | Allocations: 7407)
+
+
+Started PATCH "/users/9" for ::1 at 2021-01-25 10:54:15 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.5ms | Allocations: 2464)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5359)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 7217)
+
+
