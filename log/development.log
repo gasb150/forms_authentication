@@ -5660,3 +5660,35 @@ Processing by UsersController#update as HTML
 Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 7217)
 
 
+Started GET "/users/9" for ::1 at 2021-01-25 10:55:09 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/9"):
+  
+Started GET "/users/9/edit" for ::1 at 2021-01-25 10:55:12 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.4ms | Allocations: 3171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 8183)
+Completed 200 OK in 67ms (Views: 33.5ms | ActiveRecord: 2.8ms | Allocations: 14983)
+
+
+Started PATCH "/users/9" for ::1 at 2021-01-25 10:55:19 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 17.8ms | Allocations: 3784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 6689)
+Completed 200 OK in 67ms (Views: 31.9ms | ActiveRecord: 0.6ms | Allocations: 8691)
+
+
